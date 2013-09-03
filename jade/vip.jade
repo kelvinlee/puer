@@ -1,0 +1,99 @@
+extends home 
+block content_here
+	section.homepage
+		div.vip
+			div.banner
+				a(href="reg.html").reg 立即注册
+			div.vip-content
+				form
+					h1.title1 立即加入普尔口腔
+					p.tb 为尊重您个人隐私以及权益，以下您填写的所有资料皆不会转为其他用途，请安心填写。
+					h2 
+						span ◎ 
+						|设定帐号密码
+					div.group
+						label(for="email") 电子信箱:
+						input(type="text",id="email",name="email")
+						span 为确保您可以收到认证信与讯息通知，请填写正确
+					div.group
+						label(for="pwd") 密码:
+						input(type="text",id="pwd",name="pwd")
+						span 请输入6-12个英文或数字，不得使用空白键以及特殊字符
+					div.group
+						label(for="pwd2") 确认密码:
+						input(type="text",id="pwd2",name="pwd2")
+						span 请再次输入同样密码
+					h2 
+						span ◎ 
+						|填写个人基本资料
+					div.group
+						label(for="truename") 姓名:
+						input(type="text",id="truename",name="truename")
+						span 请填写真实中文姓名
+					div.group
+						label() 性别:
+						label().sex
+							input(type="radio",id="sex",name="sex",value="1",checked).n
+							|  男
+						label().sex
+							input(type="radio",id="sex",name="sex",value="0").n
+							|  女 
+					div.group
+						label() 生日:
+						label(for="year").sex
+							select(id="year",name="year")
+								- for (var i=2013;i>=1913;i--)
+									option(value="#{i}") #{i}
+							|  年
+						label(for="month").sex
+							select(id="month",name="month")
+								- for (var i=1;i<=12;i++)
+									option(value="#{i}") #{i}
+							|  月
+						label(for="day").sex
+							select(id="day",name="day")
+								- for (var i=1;i<=31;i++)
+									option(value="#{i}") #{i}
+							|  日
+					div.group
+						label(for="homephone") 住宅电话:
+						input(type="text",id="homephone",name="homephone").h
+					div.group
+						label(for="phone") 
+							span.important ※ 
+							| 行动电话:
+						input(type="text",id="phone",name="phone").h
+					div.group
+						label(for="zipcode") 邮递区号:
+						input(type="text",id="zipcode",name="zipcode").s
+					div.group
+						label(for="adr") 
+							span.important ※ 
+							| 地址:
+						input(type="text",id="adr",name="adr").l
+					div.clause
+						h2 
+							span ◎
+							|会员服务约定条款同意书
+						div.clause-content
+							p ※會員權益及規範條款說明：
+							p 歡迎加入普尔口腔網站會員，本網站係由台灣華歌爾股份有限公司設計建置，網站所有權歸台灣華歌爾股份有限公司所有。為保障您的權益，請於註冊使用網站服務前詳細閱讀以下條款；一旦完成註冊程序，即視為您已充分了解以下各項條款之約定，並同意遵守相關規範及約束。
+							p 1. 網站服務
+							p 會員可享有之服務項目以當時本網站所提供之功能及狀態為限。本網站保留對所有服務之項目及內容新增、刪除、修改之權利。
+							p 2. 會員個人資料
+							p 網友在加入會員時應填寫完整且 正確的個人資料，若因未填寫完整資料而導致會員權益受損，由會員自行負責，本網站不負其責。
+							p 3. 隱私權保護
+							p 本網站對會員個人資料之處理： 
+							p (1)統計及分析本網站伺服器會記錄使用者曾瀏覽之網頁、使用者連線之位址，但僅供作網站流量分析及網路行為調查之用，作為日後改善網站內容及服務品質之依據。
+							p (2) 活動及服務之通知本網站如舉辦任何活動，或增減、變更任何服務業務，將使用個人資料通知。〈隱私權保護之例外〉 於下列各款本網站得使用或透露會員個人資料：
+							p (1) 司法機關或其他有權機關依法定程序要求配合公開個人資料。
+							p 2) 經本人同意。 
+							p (3) 本網站提供服務或保障權利時所必須。
+							p (4) 其他必要之情況。
+						div.btnlist
+							label
+								input(type="checkbox",id="yes",name="yes")
+								|  我已详细阅读以上条文并同意遵守相关规定
+							input(type="reset",value="重新填写").btn.reset
+							input(type="submit",value="立即加入").btn.submit
+
